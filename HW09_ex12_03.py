@@ -12,7 +12,14 @@
 # Body
 
 def most_frequent(s):
-    print s
+    s = s.lower()
+    d = dict()
+    s = s.replace(',',"").replace(' ',"").replace('!',"").replace('.',"")
+
+    for i in s:
+        value = s.count(i)
+        d[i] = value
+    print sorted(d)
 
 ###############################################################################
 def main():   # DO NOT CHANGE BELOW
